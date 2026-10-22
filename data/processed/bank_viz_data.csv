@@ -1,0 +1,11 @@
+Rank,Bank_Name,Market_Cap_USD_Billion,Market_Cap_GBP_Billion,Market_Cap_EUR_Billion,Market_Cap_INR_Billion,Market_Share_Pct,Cumulative_Share_Pct,Share_Tier,Size_Class,Dominance_Score,Dominance_Level,Gap_to_Next_Pct,Gap_Type,Segment
+1,JPMorgan Chase,432.92,346.34,402.62,35910.71,22.79,22.79,Tier 1 - Dominant,Giant (>=2x median),42.61,Market leader,86.99,Large gap (>=10%),4 - Mega (>$300B)
+2,Bank of America,231.52,185.22,215.31,19204.58,12.19,34.97,Tier 2 - Major,Large (1.2-2x median),14.5,Strong,19.0,Large gap (>=10%),3 - Large ($200-300B)
+3,Industrial and Commercial Bank of China,194.56,155.65,180.94,16138.75,10.24,45.21,Tier 2 - Major,Large (1.2-2x median),12.4,Strong,21.09,Large gap (>=10%),2 - Medium ($150-200B)
+4,Agricultural Bank of China,160.68,128.54,149.43,13328.41,8.46,53.67,Tier 3 - Mid-tier,Mid-size (0.92-1.2x median),8.61,Competitive,1.75,Tight race (<3%),2 - Medium ($150-200B)
+5,HDFC Bank,157.91,126.33,146.86,13098.63,8.31,61.98,Tier 3 - Mid-tier,Mid-size (0.92-1.2x median),8.42,Competitive,1.31,Tight race (<3%),2 - Medium ($150-200B)
+6,Wells Fargo,155.87,124.7,144.96,12929.42,8.2,70.19,Tier 3 - Mid-tier,Mid-size (0.92-1.2x median),8.59,Competitive,4.68,Moderate gap (3-10%),2 - Medium ($150-200B)
+7,HSBC Holdings PLC,148.9,119.12,138.48,12351.26,7.84,78.03,Tier 4 - Challenger,Mid-size (0.92-1.2x median),8.29,Competitive,5.73,Moderate gap (3-10%),1 - Small (<$150B)
+8,Morgan Stanley,140.83,112.66,130.97,11681.85,7.41,85.44,Tier 4 - Challenger,Smaller (<0.92x median),7.47,Competitive,0.72,Tight race (<3%),1 - Small (<$150B)
+9,China Construction Bank,139.82,111.86,130.03,11598.07,7.36,92.8,Tier 4 - Challenger,Smaller (<0.92x median),7.52,Competitive,2.2,Tight race (<3%),1 - Small (<$150B)
+10,Bank of China,136.81,109.45,127.23,11348.39,7.2,100.0,Tier 4 - Challenger,Smaller (<0.92x median),7.2,Competitive,,Last in top 10,1 - Small (<$150B)

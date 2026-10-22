@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Spark / generated logs and local databases
+spark-warehouse/
+metastore_db/
+derby.log
+code_log.txt
+data/processed/Banks.db
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,41 @@
+Rank,Bank_Name,Currency,Market_Cap_Billion
+1,JPMorgan Chase,USD,432.92
+2,Bank of America,USD,231.52
+3,Industrial and Commercial Bank of China,USD,194.56
+4,Agricultural Bank of China,USD,160.68
+5,HDFC Bank,USD,157.91
+6,Wells Fargo,USD,155.87
+7,HSBC Holdings PLC,USD,148.9
+8,Morgan Stanley,USD,140.83
+9,China Construction Bank,USD,139.82
+10,Bank of China,USD,136.81
+1,JPMorgan Chase,GBP,346.34
+2,Bank of America,GBP,185.22
+3,Industrial and Commercial Bank of China,GBP,155.65
+4,Agricultural Bank of China,GBP,128.54
+5,HDFC Bank,GBP,126.33
+6,Wells Fargo,GBP,124.7
+7,HSBC Holdings PLC,GBP,119.12
+8,Morgan Stanley,GBP,112.66
+9,China Construction Bank,GBP,111.86
+10,Bank of China,GBP,109.45
+1,JPMorgan Chase,EUR,402.62
+2,Bank of America,EUR,215.31
+3,Industrial and Commercial Bank of China,EUR,180.94
+4,Agricultural Bank of China,EUR,149.43
+5,HDFC Bank,EUR,146.86
+6,Wells Fargo,EUR,144.96
+7,HSBC Holdings PLC,EUR,138.48
+8,Morgan Stanley,EUR,130.97
+9,China Construction Bank,EUR,130.03
+10,Bank of China,EUR,127.23
+1,JPMorgan Chase,INR,35910.71
+2,Bank of America,INR,19204.58
+3,Industrial and Commercial Bank of China,INR,16138.75
+4,Agricultural Bank of China,INR,13328.41
+5,HDFC Bank,INR,13098.63
+6,Wells Fargo,INR,12929.42
+7,HSBC Holdings PLC,INR,12351.26
+8,Morgan Stanley,INR,11681.85
+9,China Construction Bank,INR,11598.07
+10,Bank of China,INR,11348.39
