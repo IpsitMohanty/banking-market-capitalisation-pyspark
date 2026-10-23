@@ -12,7 +12,7 @@ spark-warehouse/
 metastore_db/
 derby.log
 code_log.txt
-data/processed/Banks.db
+Banks.db
 
 # OS/editor
 .DS_Store

@@ -15,7 +15,7 @@ An end-to-end ETL and exploratory-analysis project on the ten largest banks by m
 
 ## Live Tableau Public dashboard
 
-**[Open the interactive Global Banking Market Capitalisation dashboard](https://public.tableau.com/app/profile/ipsit1548/viz/Global_Banking_Market_Capitalisation/Dashboard1?publish=yes)**
+**[Open the interactive Global Banking Market Capitalisation dashboard](https://public.tableau.com/app/profile/ipsit1548/viz/Global_Banking_Market_Capitalisation/Dashboard1)**
 
 The dashboard includes bank market capitalisation, cumulative share by bank rank, dominance scores, market-cap size segments, and a currency selector.
 
@@ -39,7 +39,6 @@ banking-market-capitalisation-pyspark/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── publish.ps1
 ├── notebooks/
 │   └── ETL_Bank_Data_Analysis_Ipsit_Mohanty.ipynb
 ├── reports/
@@ -48,6 +47,7 @@ banking-market-capitalisation-pyspark/
 │   └── tableau_dashboard.png
 └── data/
     ├── source/
+    │   ├── README.md
     │   └── largest_banks_2023.csv
     ├── reference/
     │   └── exchange_rates.csv
@@ -75,18 +75,18 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Open `notebooks/ETL_Bank_Data_Analysis_Ipsit_Mohanty.ipynb` from the repository root. The notebook attempts to read the archived Wikipedia page; if the archive is unavailable, it falls back to the packaged ten-row source snapshot. It writes processed extracts to `data/processed/`, stores the transformed table in `Banks.db`, and logs ETL steps to `code_log.txt`.
+Open `notebooks/ETL_Bank_Data_Analysis_Ipsit_Mohanty.ipynb`. The notebook reads the archived Wikipedia page directly. The exchange rates and the optional S&P Global rank-movement step (`Global.xlsx`, not included in this repository) are loaded from local file paths, so update those two paths in the notebook before running it. A copy of the exchange rates is in `data/reference/exchange_rates.csv`; its rate column is named `Rate_per_USD`, so rename it to `Rate` if you use it in place of the original file. The notebook writes `Banks.db`, `code_log.txt` and its CSV extracts to its working directory; copies of the processed CSVs are stored in `data/processed/`.
 
 ### 2. Dashboard files
 
 - `data/processed/bank_viz_data.csv`: one record per bank, including market-cap conversions and derived metrics.
 - `data/processed/bank_viz_currency_long.csv`: one record per bank per currency (40 rows), suitable for currency-specific charts.
 
-The Tableau Public dashboard was built from Google Sheets copies of these CSVs. The supplied screenshot is in `assets/`.
+The Tableau Public dashboard was built from Google Sheets copies of these CSVs. A screenshot of the dashboard is in `assets/`.
 
 ## Data and assumptions
 
-- **Source:** [archived Wikipedia *List of largest banks* page (8 September 2023 snapshot)](https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks), with the ten-row source snapshot bundled for reproducibility.
+- **Source:** [archived Wikipedia *List of largest banks* page (8 September 2023 snapshot)](https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks), with a ten-row copy of the source data included in `data/source/` for reference.
 - **Fields:** rank, bank name, and market capitalisation in USD billions.
 - **FX multipliers:** USD = 1.00, GBP = 0.80, EUR = 0.93, INR = 82.95, applied as fixed multipliers to USD. The supplied exchange-rate file does not state its effective date, so conversions may not be contemporaneous with the market-cap snapshot.
 - **Outliers:** IQR fences are based on quartiles computed from the ten values; JPMorgan Chase is flagged and retained because it is treated as a genuine observation.
@@ -99,16 +99,6 @@ The Tableau Public dashboard was built from Google Sheets copies of these CSVs. 
 
 Python, PySpark, pandas, NumPy, Matplotlib, Seaborn, SQLite, Jupyter, Tableau Public, and Google Sheets.
 
-## Publish to GitHub (Windows PowerShell)
-
-After extracting the ZIP bundle, open PowerShell in the project folder and run:
-
-```powershell
-.\publish.ps1
-```
-
-The script checks that Git and GitHub CLI (`gh`) are installed and authenticated, initializes the local repository, creates the first commit, then creates a **public** repository named `banking-market-capitalisation-pyspark` and pushes `main`. To keep the repository private, change `--public` to `--private` in `publish.ps1` before running it.
-
 ## Report
 
-The PDF report documents methodology, data-quality checks, nine EDA charts, ETL outputs, window-function analysis, segment analysis, dashboards, conclusions, and limitations. Page 2 has been reformatted to improve the spacing and add a visual data-quality summary; its quantitative conclusions are preserved.
+The PDF report documents methodology, data-quality checks, nine EDA charts, ETL outputs, window-function analysis, segment analysis, dashboards, conclusions, and limitations.
